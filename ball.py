@@ -20,5 +20,4 @@ class Ball(Turtle):
     def pad_collision(self):
         angle = -self.heading() + 180
         self.setheading(angle)
-        self.move()
-
+        self.forward(4)  # slight acceleration to avoid getting caught in wall boundary condition glitch
