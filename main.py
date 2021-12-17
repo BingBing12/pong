@@ -31,7 +31,7 @@ game_on = True
 def pong():
     while game_on:
         screen.update()
-        if ball.xcor() >= 355 and ball.distance(p2) < 51 or ball.xcor() <= -365 and ball.distance(p1) < 51:
+        if ball.xcor() >= 350 and ball.distance(p2) < 51 or ball.xcor() <= -360 and ball.distance(p1) < 51:
             ball.pad_collision()
         if ball.ycor() > 285 or ball.ycor() < -280:
             ball.collision()
@@ -43,8 +43,8 @@ def pong():
             score.p2_score += 1
             score.write_score()
             break
-        else:
-            ball.move()
+
+        ball.move()
 
 
 while game_on:
